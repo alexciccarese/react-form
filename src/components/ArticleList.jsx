@@ -9,7 +9,6 @@ export default function ArticlesList({ articles }) {
         <Article
           key={article.id}
           id={article.id}
-          img={article.img}
           title={article.title}
         />
       ))}
