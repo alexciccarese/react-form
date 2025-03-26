@@ -1,5 +1,5 @@
 import { useState } from "react"
-import articles from "../data/articles"
+import articlesData from "../data/articles"
 import ArticlesList from "./articleList"
 import Form from "./Form"
 
@@ -12,7 +12,7 @@ export default function Main() {
       id: articles.length + 1,
       title: title,
     }
-    
+
     setArticles([...articles, newArticle])
   }
 

@@ -1,11 +1,20 @@
 import { useState } from "react"
 
-export default function Form() {
+export default function Form({ addArticle }) {
   const [newPost, setNewPost] = useState('')
+
+  function handleSubmit() {
+
+    if(newPost === '') 
+      return
+      addArticle(newPost)
+      setNewPost("")
+    
+  }
 
   return(
 
-    <form>
+    <form onSubmit={(e) => e.preventDefault()}>
 
     <div className="mb-3">
       <label htmlFor="new-post" className="form-label">Post</label>
@@ -22,7 +31,7 @@ export default function Form() {
       />
     </div>
 
-    <button type="button" className="btn btn-primary">
+    <button type="button" className="btn btn-primary" onClick={handleSubmit}>
       Submit
     </button>
 
