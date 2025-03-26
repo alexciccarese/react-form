@@ -1,4 +1,4 @@
-export default function Article({ id, img, title }) {
+export default function Article({ id, title }) {
   
   return (
     <div className="card">
