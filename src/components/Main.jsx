@@ -1,6 +1,6 @@
 import { useState } from "react"
 import articlesData from "../data/articles"
-import ArticlesList from "./articleList"
+import ArticlesList from "./ArticleList"
 import Form from "./Form"
 
 export default function Main() {
